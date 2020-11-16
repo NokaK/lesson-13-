@@ -1,0 +1,58 @@
+@import './../modules/variable.scss';
+@import './../modules/classes.scss';
+@import './../modules/mixins.scss';
+
+
+.main-content {
+    height: 1500px;
+    header {
+        width: $size001;
+        background-color: $color01;
+        @include flex-property(flex-end,center);
+        @include display(flex);
+        @include position(fixed);
+        @include position-align(0,0);
+        nav {
+            width: $size05;
+           ul{
+               @include flex-property(space-between,center);
+               @include display(flex);
+               li{
+                   color: $color02;
+                   &:hover {
+                       color: $color05;
+                   }
+                   &:first-child {
+                       color: $color04;
+                       &:hover {
+                            color: $color02;
+                        }
+                   }
+               }
+           }
+        }
+    }
+    .container {
+        padding: $size02 0 0;
+        @extend %container;
+        .article-box {
+            @include flex-property(space-around,center);
+            @include display(flex);
+            article {
+                @include width(500px);
+                margin: 10px;
+                h3 {
+                    @extend %title;
+                }
+                img {
+                    width : $size02 ;
+                }
+            }
+        }
+    }
+    .other-block {
+        h3 {
+            @extend %title;
+        }
+    }
+}

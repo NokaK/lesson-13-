@@ -1,0 +1,27 @@
+@import './variable.scss';
+
+@mixin display($property) {
+    display: $property;
+}
+@mixin flex-property($justify,$align){
+    justify-content: $justify ;
+    align-items: $align;
+}
+
+@mixin position($property){
+    position: $property;
+}
+@mixin position-align($top,$left){
+    top: $top;
+    left: $left;
+}
+
+@mixin width($size){
+    @if($size == $size01){
+        background : $color04;
+    }@else if ($size == $size02){
+        background:  $color05;
+    }@else  {
+        background: $color06;
+    }
+}
